@@ -1,8 +1,9 @@
 ﻿using CoinAPI.REST.V1;
+using MiningIncomeCalculator.Core.Interfaces;
 
 namespace MiningIncomeCalculator.Infrastructure;
 
-public class CoinApiClient
+public class CoinApiClient : ICoinApiClient
 {
     private readonly string _apiKey;
 
