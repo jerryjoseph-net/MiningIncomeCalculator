@@ -16,12 +16,18 @@ public class F2PoolRepository : IF2PoolRepository
             var line = reader.ReadLine();
             var values = line?.Split(',');
 
-            if (values != null && values[0] != "Date") // Skip header row
+            if (IsDataRow(values)) // Skip header row
             {
-                payouts.Add(new Payout(values[0], values[1], values[2], values[3], values[4]));
+                payouts.Add(new Payout(values![0], values[1], values[2], values[3], values[4]));
             }
         }
 
         return payouts;
+    }
+
+    private static bool IsDataRow(IReadOnlyList<string>? values)
+    {
+        return values != null 
+               && values[0] != "Date";
     }
 }
