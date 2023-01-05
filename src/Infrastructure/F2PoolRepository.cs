@@ -1,6 +1,9 @@
-﻿namespace MiningIncomeCalculator.Infrastructure;
+﻿using MiningIncomeCalculator.Core.Interfaces;
+using MiningIncomeCalculator.Core.Models;
 
-public class F2PoolRepository
+namespace MiningIncomeCalculator.Infrastructure;
+
+public class F2PoolRepository : IF2PoolRepository
 {
     public List<Payout> GetPayoutData(string csvFilePath)
     {
@@ -22,5 +25,3 @@ public class F2PoolRepository
         return payouts;
     }
 }
-
-public record Payout(string Date, string Amount, string Address, string Status, string TxId);
