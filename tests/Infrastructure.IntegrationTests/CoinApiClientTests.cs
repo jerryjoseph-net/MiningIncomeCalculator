@@ -26,7 +26,7 @@ public class CoinApiClientTests
 
         // Act
 
-        var result = await sut.GetBtcPrice(new DateTime(2022, 01, 01));
+        var result = await sut.GetBtcPrice(new DateTime(2022, 08, 15), "SEK");
 
         // Assert
 

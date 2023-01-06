@@ -2,7 +2,7 @@
 
 namespace MiningIncomeCalculator.Core.Interfaces;
 
-public interface IF2PoolRepository
+public interface IBtcIncomeService
 {
-    List<Payout> GetPayoutData(string csvFilePath);
+    Task<List<Income>> GetIncomesAsync(List<Payout> payouts);
 }

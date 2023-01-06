@@ -1,5 +1,5 @@
 ﻿using CoinAPI.REST.V1;
-using MiningIncomeCalculator.Core.Interfaces;
+using MiningIncomeCalculator.Core.Interfaces.Infrastructure;
 
 namespace MiningIncomeCalculator.Infrastructure;
 
@@ -12,11 +12,11 @@ public class CoinApiClient : ICoinApiClient
         _apiKey = apiKey;
     }
 
-    public async Task<decimal> GetBtcPrice(DateTime time)
+    public async Task<decimal> GetBtcPrice(DateTime time, string currency)
     {
         var client = new CoinApiRestClient(_apiKey);
         
-        var exchangeRate = await client.Exchange_rates_get_specific_rateAsync("BTC", "USD", time);
+        var exchangeRate = await client.Exchange_rates_get_specific_rateAsync("BTC", currency, time);
 
         return exchangeRate.rate;
     }

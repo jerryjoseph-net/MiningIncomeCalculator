@@ -1,4 +1,4 @@
-﻿using MiningIncomeCalculator.Core.Interfaces;
+﻿using MiningIncomeCalculator.Core.Interfaces.Infrastructure;
 using MiningIncomeCalculator.Core.Models;
 
 namespace MiningIncomeCalculator.Infrastructure;
@@ -18,7 +18,8 @@ public class F2PoolRepository : IF2PoolRepository
 
             if (IsDataRow(values)) // Skip header row
             {
-                payouts.Add(new Payout(values![0], values[1], values[2], values[3], values[4]));
+                var date = DateTime.Parse(values![0]);
+                payouts.Add(new Payout(date, values[1], values[2], values[3], values[4]));
             }
         }
 
