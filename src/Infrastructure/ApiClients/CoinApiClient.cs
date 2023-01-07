@@ -16,8 +16,17 @@ public class CoinApiClient : ICoinApiClient
     {
         var client = new CoinApiRestClient(_apiKey);
 
-        var exchangeRate = await client.Exchange_rates_get_specific_rateAsync("BTC", currency, time);
+        try
+        {
+            var exchangeRate = await client.Exchange_rates_get_specific_rateAsync("BTC", currency, time);
 
-        return exchangeRate.rate;
+            return exchangeRate.rate;
+        }
+        catch (Exception ex)
+        {
+            // TODO Log exception
+
+            return 0; // Manually fix data in output file for these
+        }
     }
 }

@@ -6,10 +6,13 @@ internal class Startup
 {
     public static IConfiguration InitConfiguration()
     {
-        var config = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json")
-            .AddEnvironmentVariables()
-            .Build();
+        var builder = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("settings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile("local.settings.json", optional: true, reloadOnChange: true)
+            .AddEnvironmentVariables();
+
+        var config = builder.Build();
 
         return config;
     }
