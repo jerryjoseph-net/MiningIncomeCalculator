@@ -1,6 +1,6 @@
 ﻿using MiningIncomeCalculator.Core.Models;
 
-namespace MiningIncomeCalculator.Core.Interfaces.Infrastructure;
+namespace MiningIncomeCalculator.Core.Interfaces.Infrastructure.Repositories;
 
 public interface IIncomeRepository
 {

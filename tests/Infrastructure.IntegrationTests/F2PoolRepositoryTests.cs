@@ -1,4 +1,6 @@
-﻿namespace MiningIncomeCalculator.Infrastructure.IntegrationTests;
+﻿using MiningIncomeCalculator.Infrastructure.Repositories;
+
+namespace MiningIncomeCalculator.Infrastructure.IntegrationTests;
 
 public class F2PoolRepositoryTests
 {

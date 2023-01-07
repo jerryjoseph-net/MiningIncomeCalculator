@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Configuration;
+using MiningIncomeCalculator.Infrastructure.ApiClients;
 
 namespace MiningIncomeCalculator.Infrastructure.IntegrationTests;
 

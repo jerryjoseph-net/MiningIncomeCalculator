@@ -1,5 +1,5 @@
-﻿using MiningIncomeCalculator.Core.Interfaces;
-using MiningIncomeCalculator.Core.Interfaces.Infrastructure;
+﻿using MiningIncomeCalculator.Core.Interfaces.Core.Services;
+using MiningIncomeCalculator.Core.Interfaces.Infrastructure.Repositories;
 
 namespace MiningIncomeCalculator.Core.Commands;
 

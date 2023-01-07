@@ -1,5 +1,6 @@
 using MiningIncomeCalculator.Core.Models;
-using MiningIncomeCalculator.Infrastructure;
+using MiningIncomeCalculator.Core.Services;
+using MiningIncomeCalculator.Infrastructure.ApiClients;
 
 namespace MiningIncomeCalculator.Core.IntegrationTests;
 

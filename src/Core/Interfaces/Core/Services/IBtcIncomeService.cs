@@ -1,6 +1,6 @@
 ﻿using MiningIncomeCalculator.Core.Models;
 
-namespace MiningIncomeCalculator.Core.Interfaces;
+namespace MiningIncomeCalculator.Core.Interfaces.Core.Services;
 
 public interface IBtcIncomeService
 {

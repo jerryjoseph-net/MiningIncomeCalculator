@@ -1,4 +1,4 @@
-﻿namespace MiningIncomeCalculator.Core.Interfaces.Infrastructure;
+﻿namespace MiningIncomeCalculator.Core.Interfaces.Infrastructure.ApiClients;
 
 public interface ICoinApiClient
 {

@@ -1,7 +1,7 @@
-﻿using MiningIncomeCalculator.Core.Interfaces.Infrastructure;
+﻿using MiningIncomeCalculator.Core.Interfaces.Infrastructure.Repositories;
 using MiningIncomeCalculator.Core.Models;
 
-namespace MiningIncomeCalculator.Infrastructure;
+namespace MiningIncomeCalculator.Infrastructure.Repositories;
 
 public class F2PoolRepository : IF2PoolRepository
 {
@@ -10,7 +10,7 @@ public class F2PoolRepository : IF2PoolRepository
         var payouts = new List<Payout>();
 
         using var reader = new StreamReader(csvFilePath);
-        
+
         while (!reader.EndOfStream)
         {
             var line = reader.ReadLine();
@@ -28,7 +28,7 @@ public class F2PoolRepository : IF2PoolRepository
 
     private static bool IsDataRow(IReadOnlyList<string>? values)
     {
-        return values != null 
+        return values != null
                && values[0] != "Date";
     }
 }

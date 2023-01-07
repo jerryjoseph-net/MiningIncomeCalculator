@@ -1,8 +1,8 @@
-﻿using MiningIncomeCalculator.Core.Interfaces;
-using MiningIncomeCalculator.Core.Interfaces.Infrastructure;
+﻿using MiningIncomeCalculator.Core.Interfaces.Core.Services;
+using MiningIncomeCalculator.Core.Interfaces.Infrastructure.ApiClients;
 using MiningIncomeCalculator.Core.Models;
 
-namespace MiningIncomeCalculator.Core;
+namespace MiningIncomeCalculator.Core.Services;
 
 public class BtcIncomeService : IBtcIncomeService
 {
