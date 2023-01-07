@@ -3,7 +3,7 @@ using MiningIncomeCalculator.Core.Services;
 using MiningIncomeCalculator.Infrastructure.ApiClients;
 using MiningIncomeCalculator.Infrastructure.Repositories;
 
-namespace MiningIncomeCalculator.Core.IntegrationTests;
+namespace MiningIncomeCalculator.Core.IntegrationTests.Commands;
 
 public class CalculateIncomeCommandHandlerTests
 {
@@ -20,12 +20,12 @@ public class CalculateIncomeCommandHandlerTests
 
 
         var sut = new CalculateIncomeCommand.CalculateIncomeCommandHandler(
-            new BtcIncomeService(new CoinApiClient(apiKey)), 
-            new F2PoolRepository(), 
+            new BtcIncomeService(new CoinApiClient(apiKey)),
+            new F2PoolRepository(),
             new IncomeRepository(),
             payoutFilePath,
             incomeFilePath);
-        
+
         // Act
 
         await sut.Handle();

@@ -1,7 +1,7 @@
 using MiningIncomeCalculator.Core.Models;
 using MiningIncomeCalculator.Infrastructure.Extensions;
 
-namespace MiningIncomeCalculator.Infrastructure.UnitTests
+namespace MiningIncomeCalculator.Infrastructure.UnitTests.Extensions
 {
     public class IncomeExtensionsTests
     {
@@ -19,7 +19,7 @@ namespace MiningIncomeCalculator.Infrastructure.UnitTests
 
             // Act
 
-            var result =  sut.ToCsv();
+            var result = sut.ToCsv();
 
             // Assert
 
@@ -29,7 +29,7 @@ namespace MiningIncomeCalculator.Infrastructure.UnitTests
         private static Income CreateIncome(int year, int month, int day, string amount, decimal rate)
         {
             return new Income(
-                new Payout(new DateTime(year, month, day), amount, "FakeAddress", "Paid", "FakeTxId"), 
+                new Payout(new DateTime(year, month, day), amount, "FakeAddress", "Paid", "FakeTxId"),
                 rate,
                 "SEK");
         }

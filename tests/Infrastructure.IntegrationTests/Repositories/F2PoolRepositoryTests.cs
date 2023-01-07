@@ -1,6 +1,6 @@
 ﻿using MiningIncomeCalculator.Infrastructure.Repositories;
 
-namespace MiningIncomeCalculator.Infrastructure.IntegrationTests;
+namespace MiningIncomeCalculator.Infrastructure.IntegrationTests.Repositories;
 
 public class F2PoolRepositoryTests
 {

@@ -1,6 +1,6 @@
 using MiningIncomeCalculator.Infrastructure.ApiClients;
 
-namespace MiningIncomeCalculator.Infrastructure.IntegrationTests;
+namespace MiningIncomeCalculator.Infrastructure.IntegrationTests.ApiClients;
 
 public class CoinApiClientTests
 {

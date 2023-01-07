@@ -2,7 +2,7 @@ using MiningIncomeCalculator.Core.Models;
 using MiningIncomeCalculator.Core.Services;
 using MiningIncomeCalculator.Infrastructure.ApiClients;
 
-namespace MiningIncomeCalculator.Core.IntegrationTests;
+namespace MiningIncomeCalculator.Core.IntegrationTests.Services;
 
 public class BtcIncomeServiceTests
 {
